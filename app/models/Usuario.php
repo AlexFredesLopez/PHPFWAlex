@@ -18,4 +18,20 @@ class Usuario {
     $resultados =  $this->db->registers();
     return $resultados;
   }
+  
+  public function agregarUsuario($datos){
+    $this->db->query("INSERT INTO usuarios (nombre, email, telefono) VALUES (:nombre, :email, :telefono)");
+    
+    
+    $this->db->bind(':nombre', $datos['nombre']);
+    $this->db->bind(':email', $datos['email']);
+    $this->db->bind(':telefono', $datos['telefono']);
+    
+    
+    if($this->db->execute()){
+      return true;
+    }else{
+      return false;
+    }
+  }
 }
