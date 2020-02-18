@@ -19,6 +19,13 @@ class Usuario {
     return $resultados;
   }
   
+  public function obtenerUsuario($id){
+    $this->db->query("SELECT * FROM usuarios where usuario_id = :usuario_id");
+    $this->db->bind(":usuario_id", $id);
+    $resultados =  $this->db->register();
+    return $resultados;
+  }
+  
   public function agregarUsuario($datos){
     $this->db->query("INSERT INTO usuarios (nombre, email, telefono) VALUES (:nombre, :email, :telefono)");
     
@@ -28,6 +35,31 @@ class Usuario {
     $this->db->bind(':telefono', $datos['telefono']);
     
     
+    if($this->db->execute()){
+      return true;
+    }else{
+      return false;
+    }
+  }
+  
+  public function actualizarUsuario($datos){
+    $this->db->query("UPDATE usuarios SET nombre = :nombre, email = :email, telefono = :telefono WHERE usuario_id = :usuario_id");
+    $this->db->bind(':usuario_id', $datos['usuario_id']);
+    $this->db->bind(':nombre', $datos['nombre']);
+    $this->db->bind(':email', $datos['email']);
+    $this->db->bind(':telefono', $datos['telefono']);
+    
+    if($this->db->execute()){
+      return true;
+    }else{
+      return false;
+    }
+  }
+  
+  
+  public function eliminarUsuario($datos){
+    $this->db->query("DELETE FROM usuarios where usuario_id = :usuario_id");
+    $this->db->bind(':usuario_id', $datos['usuario_id']);
     if($this->db->execute()){
       return true;
     }else{

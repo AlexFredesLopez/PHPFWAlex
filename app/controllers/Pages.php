@@ -36,7 +36,7 @@ class Pages extends Controller {
       );
       
       if($this->usuarioModelo->agregarUsuario($datos)){
-        redireccionar('paginas');
+        redireccionar('pages');
       }else{
          die("Ups!! Algo Salió mal");
       }
@@ -50,5 +50,65 @@ class Pages extends Controller {
      $this->view('pages/agregar', $datos);
     }
     
+  }
+  
+  
+  public function editar($id){
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+      $datos = array(
+          'usuario_id' => trim($id),
+          'nombre' => trim($_POST['nombre']),
+          'email' => trim($_POST['email']),
+          'telefono' => trim($_POST['telefono'])
+      );
+      
+      if($this->usuarioModelo->actualizarUsuario($datos)){
+        redireccionar('pages');
+      }else{
+         die("Ups!! Algo Salió mal");
+      }
+    }else{
+      
+      $usuario = $this->usuarioModelo->obtenerUsuario($id);
+      
+      $datos = array(
+          'usuario_id' => $usuario->usuario_id,
+          'nombre' => $usuario->nombre,
+          'email' => $usuario->email,
+          'telefono' => $usuario->telefono
+      );
+     
+     $this->view('pages/editar', $datos);
+    }
+  }
+  
+  
+  public function borrar($id){
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+      $datos = array(
+          'usuario_id' => trim($id),
+          'nombre' => trim($_POST['nombre']),
+          'email' => trim($_POST['email']),
+          'telefono' => trim($_POST['telefono'])
+      );
+      
+      if($this->usuarioModelo->eliminarUsuario($datos)){
+        redireccionar('pages');
+      }else{
+         die("Ups!! Algo Salió mal");
+      }
+    }else{
+      
+      $usuario = $this->usuarioModelo->obtenerUsuario($id);
+      
+      $datos = array(
+          'usuario_id' => $usuario->usuario_id,
+          'nombre' => $usuario->nombre,
+          'email' => $usuario->email,
+          'telefono' => $usuario->telefono
+      );
+     
+     $this->view('pages/borrar', $datos);
+    }
   }
 }
