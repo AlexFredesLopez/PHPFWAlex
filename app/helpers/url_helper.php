@@ -5,3 +5,10 @@
 function redireccionar($pagina){
   header("Location:". RUTA_URL.$pagina);
 }
+
+
+function printArray($texto){
+  print '<pre>';
+  print_r($texto);
+  print '</pre>';
+}

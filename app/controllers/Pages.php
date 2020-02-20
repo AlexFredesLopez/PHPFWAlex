@@ -21,6 +21,7 @@ class Pages extends Controller {
         "titulo" => "Bienvenido al MVC",
         "usuarios" => $usuario
     );
+    
     $this->view('pages/inicio', $datos);
   }
   
