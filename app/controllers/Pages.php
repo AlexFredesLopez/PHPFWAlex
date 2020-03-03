@@ -22,7 +22,7 @@ class Pages extends Controller {
         "usuarios" => $usuario
     );
     
-    $this->view('pages/inicio', $datos);
+    $this->view('inicio', $datos);
   }
   
   
@@ -48,7 +48,7 @@ class Pages extends Controller {
           'telefono' => ''
       );
      
-     $this->view('pages/agregar', $datos);
+     $this->view('agregar', $datos);
     }
     
   }
@@ -79,7 +79,7 @@ class Pages extends Controller {
           'telefono' => $usuario->telefono
       );
      
-     $this->view('pages/editar', $datos);
+     $this->view('editar', $datos);
     }
   }
   
@@ -109,7 +109,7 @@ class Pages extends Controller {
           'telefono' => $usuario->telefono
       );
      
-     $this->view('pages/borrar', $datos);
+     $this->view('borrar', $datos);
     }
   }
 }

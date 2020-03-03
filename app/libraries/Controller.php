@@ -11,7 +11,7 @@ class Controller {
     
     require_once SYS_PATH .'models/'.$model.".php";
     
-    // INstanciar el modelo
+    // Instanciar el modelo
     
     return new $model();
     
@@ -22,15 +22,12 @@ class Controller {
   public function view($view, $datos = []){
     // Chequear si existe vista
     
-    if(file_exists(SYS_PATH .'views/'.$view.".php")){
-      require_once SYS_PATH .'views/'.$view.".php";
+    if(file_exists(SYS_PATH .'views/pages/'.$view.".php")){
+      require_once SYS_PATH .'views/pages/'.$view.".php";
 
     }else{
       // si el archivo no existe
       die("la vista no existe");
     }
-    
-    
-    
   }
 }

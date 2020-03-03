@@ -4,7 +4,7 @@
 define("APP_PATH", "../public/");
 define("SYS_PATH", "../app/");
 
-define('NOMBRE_SITIO', 'FrameWork PHP');
+define('NOMBRE_SITIO', 'Carrito de Compras');
 // Configuracion acceso a base de datos
 
 define('RUTA_APP',dirname(dirname(__FILE__)));

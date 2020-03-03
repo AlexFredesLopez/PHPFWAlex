@@ -10,20 +10,18 @@
   </head>
   <body>
 
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-inverse bg-dark mb-3">
-       <a class="navbar-brand" href="#">Navbar w/ text</a>
-       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-       </button>
-        <a href="<?php echo RUTA_URL?>" class="navbar-brand"> CRUD MVC</a>
-         <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="<?php echo RUTA_URL?>paginas/agregar">Insertar <span class="sr-only"></span></a>
-            </li>
-          </ul>
-         </div>
-      </nav>
+    <div class="container.">
+      
+    <nav class="navbar navbar-light" style="background-color: #80b3d8;">
+      <div class="container row">
+        <div class="ml-5 col-md-3">
+          <div class="row">
+            <div class="col-md-4"><a href="<?php echo RUTA_URL?>">Inicio</a></div>
+            <div class="col-md-4"><a href="<?php echo RUTA_URL?>categorias">Categorías</a></div>
+          </div>
+        </div>
+      </div>
+      
+    </nav>
       
     
