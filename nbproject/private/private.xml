@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/alexfredes/Sites/phpmvc/app/views/pages/producto/index.php</file>
+            <file>file:/Users/alexfredes/Sites/phpmvc/app/libraries/Cart.php</file>
+            <file>file:/Users/alexfredes/Sites/phpmvc/app/controllers/Productos.php</file>
+            <file>file:/Users/alexfredes/Sites/phpmvc/app/views/pages/inicio.php</file>
+            <file>file:/Users/alexfredes/Sites/phpmvc/app/views/inc/header.php</file>
+            <file>file:/Users/alexfredes/Sites/phpmvc/app/.htaccess</file>
+            <file>file:/Users/alexfredes/Sites/phpmvc/app/views/pages/categoria/indexCategoria.php</file>
+            <file>file:/Users/alexfredes/Sites/phpmvc/public/css/styles.css</file>
+            <file>file:/Users/alexfredes/Sites/phpmvc/app/views/inc/footer.php</file>
+        </group>
+    </open-files>
 </project-private>
